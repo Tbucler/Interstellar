@@ -9,7 +9,7 @@ try {
 if (!inFrame && !navigator.userAgent.includes('Firefox')) {
   const popup = open('about:blank', '_blank')
   if (!popup || popup.closed) {
-    alert('Please allow popups and redirects.')
+    alert('Please allow popups and redirects. If you do not do so, The teacher will be able to see your screen and the link will get blocked much faster. Dont know how to? Join the discord! discord.gg/dyS58Zxhfj')
   } else {
     const doc = popup.document
     const iframe = doc.createElement('iframe')
@@ -32,7 +32,7 @@ if (!inFrame && !navigator.userAgent.includes('Firefox')) {
     doc.head.appendChild(link)
     doc.body.appendChild(iframe)
 
-    const pLink = localStorage.getItem(encodeURI('pLink')) || 'https://www.nasa.gov/'
+    const pLink = localStorage.getItem(encodeURI('pLink')) || 'https://google.com/'
     location.replace(pLink)
 
     const script = doc.createElement('script')
@@ -56,16 +56,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
 })
 
 let splashtext = [
-  'Over 8 Million Users since 2023',
-  'Fastest growing proxy server',
-  'Made by xBubbo',
-  'Check out discord.gg/interstellar :)',
-  'Thanks for using the site',
-  'Follow us on Tiktok (@useinterstellar)',
-  'Subscribe to us on YouTube (@unblocking)',
-  'Subscribe to my Youtube (@xbubbo)',
-  'Check out the settings page',
-  'Check out our Patreon (https://www.patreon.com/gointerstellar)',
+  'Want the tab to look more educational? Go to settings and change the Tab Cloaking options!',
+  'Ads annoying you? Go to settings and turn off Advertisements!',
+  'Having trouble or need support? Join the discord! discord.gg/dyS58Zxhfj',
+  'Phone Number: 978-891-7967 Message or Call me for questions!',
+  'Want to add more tips to here? Join the discord! discord.gg/dyS58Zxhfj',
+  'Created by Kayden Snowden',
+  'Co-Created by Connor',
+  'Created with the help of our development team: Kira, Noah, Alex, Adam, and Axel.',
 ]
 
 document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)]
